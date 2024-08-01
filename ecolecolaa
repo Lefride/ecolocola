@@ -23,6 +23,6 @@ async def hello(ctx):
 async def bateria(ctx):
     await ctx.send(f"Las baterías de sodio son una alternativa más sostenible a las baterías de iones de litio. Aunque aún enfrentan desafíos técnicos, su potencial es prometedor.")
 
-bot.command()
+@bot.command()
 async def gases(ctx):
     await ctx.send(f"Los gases de efecto invernadero retienen el calor del sol y son emitidos tanto naturalmente como por la actividad humana. El más peligroso es el dióxido de carbono (CO₂), liberado principalmente por la quema de combustibles fósiles")
