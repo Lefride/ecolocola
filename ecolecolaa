@@ -1,0 +1,28 @@
+import discord
+import random
+from discord.ext import commands
+import os
+import command_api as ca
+
+intents = discord.Intents.default()
+intents.message_content = True
+bot = commands.Bot(command_prefix='!', intents=intents)
+
+
+token = "your token"
+
+@bot.event
+async def on_ready():
+    print(f"¡saludos{bot.user}!")
+
+@bot.command()
+async def hello(ctx):
+    await ctx.send(f"hola soy: {bot.user}")
+
+@bot.command()
+async def bateria(ctx):
+    await ctx.send(f"Las baterías de sodio son una alternativa más sostenible a las baterías de iones de litio. Aunque aún enfrentan desafíos técnicos, su potencial es prometedor.")
+
+bot.command()
+async def gases(ctx):
+    await ctx.send(f"Los gases de efecto invernadero retienen el calor del sol y son emitidos tanto naturalmente como por la actividad humana. El más peligroso es el dióxido de carbono (CO₂), liberado principalmente por la quema de combustibles fósiles")
